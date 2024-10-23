@@ -17,5 +17,5 @@ class Item:
 
 
     def register_in_database(self):
-        pass
+        print("Item Name : " + self.name + "; Item Description : " + self.description)
 
