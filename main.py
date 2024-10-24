@@ -6,16 +6,12 @@ from dotenv import load_dotenv
 
 
 def main():
-    #item_extractor = ItemsExtractor()
-    #item_extractor.extract_items()
+    item_extractor = ItemsExtractor()
+    item_extractor.start_extraction()
     #ability_extractor = AbilitiesExtractor()
-    #ability_extractor.extract_items()
-    load_dotenv()
-    MY_ENV_VAR = os.getenv('TEST')
-
-    print(MY_ENV_VAR)
+    #ability_extractor.start_extraction()
     #perk_extractor = PerksExtractor()
-    #perk_extractor.extract_items()
+    #perk_extractor.start_extraction()
 
 if __name__ == '__main__':
     main()
