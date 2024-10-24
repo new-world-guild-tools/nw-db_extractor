@@ -17,6 +17,17 @@ class Loader:
         self.__username = os.getenv("API_USERNAME")
         self.__password = os.getenv("API_PASSWORD")
 
+    def __stop_connection(self):
+        self.__connection.close()
+
+    def __send_post_request(self, endpoint, post_data, headers):
+        self.__connection.request("POST", endpoint, post_data, headers)
+        return self.__connection.getresponse()
+
+    def __send_get_request(self, endpoint, headers):
+        self.__connection.request("GET", endpoint, None, headers)
+        return self.__connection.getresponse()
+
     def connect_to_api(self):
         print("Username: " + str(self.__username))
         print("Password: " + str(self.__password))
